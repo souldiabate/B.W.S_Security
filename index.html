@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200&display=swap" rel="stylesheet">
+    <title>B.W.S</title>
+    <style>
+    *{
+        padding: 0;margin: 0;
+        color: white;
+        text-decoration: none;
+        font-family: 'Roboto Slab', serif;;
+    }
+    body{
+        background-color: black;
+    }
+    .hearder{
+        background-color: #00072b;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "logo menu menu";
+        text-align: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+    .logo{
+        grid-area: logo;
+        
+    }
+    .imglogo{
+        height: 80px;
+        width: 80px;
+        border-radius: 50px;
+    }
+    
+    .menu{
+        height: 70px;
+        grid-area: menu;
+        display: flex;
+        align-items: center;
+        justify-content: space-around
+        
+    }
+    .menuh{
+        text-decoration: none;
+        color: black;
+        width: 75px;
+        border: none;
+        border-radius: 5px;
+        background-color: white;
+    }
+    .menuh:hover{
+        background-color: red;
+        font-size: 14px;
+        color: white;
+    }
+    @media (max-width:500px){
+        .menuh{
+        font-size: 14px;
+        text-decoration: none;
+        color: black;
+        width: 60px;
+        border: none;
+        border-radius: 5px;
+        background-color: white;
+    }  
+    }
+    .body{
+        position: relative;
+        top: 70px;
+        grid-area: body;
+        display: grid;
+        text-align: center;
+        /*background-color: #00072b;*/
+        background-color: #00075b;
+    }
+    #hero{
+        width: 100%;
+        height: 65vh;
+        background-image: url('assets/images/hero.jpeg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    @media (max-width:500px){
+        #hero{
+        width: 100%;
+        height: 200px;
+        background-image: url('assets/images/hero.jpeg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    }
+    .Title{
+        font-size: 38px;
+        color: red;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    .textAbo{
+        color: white;
+        background-image: url('assets/images/fontbouclier.png');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-right: 15%;
+        margin-left: 15%;
+    }
+    .textAbou{
+        color: white;
+        margin-right: 15%;
+        margin-left: 15%;
+    }
+    @media (max-width:500px){
+        .textAbo{
+        margin-right: 1%;
+        margin-left: 1%;
+    }
+    .textAbou{
+        margin-right: 1%;
+        margin-left: 1%;
+    }
+    }
+    .spanT{
+        font-size: 24px;
+    }
+    .Card{
+        display: grid;
+        gap: 0.2rem;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "cardserv1 cardserv2 cardserv3"
+        "cardserv4 cardserv5 cardserv5"
+        "cardserv6 cardserv6 cardserv6"
+        "cardserv7 cardserv8 cardserv8";
+         
+    }
+    @media (max-width: 500px){
+        .Card{
+        display: grid;
+        gap: 0.1rem;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "cardserv1 cardserv2"
+        "cardserv5 cardserv5"
+        "cardserv3 cardserv4"
+        "cardserv6 cardserv6"
+        "cardserv7 cardserv8";
+    } 
+    }
+    .cardserv1{
+        grid-area: cardserv1;
+        display: flex;
+        text-align: center;
+        align-content: center;
+        background-image: url("assets/images/gardinnage.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .cardserv2{
+        grid-area: cardserv2;
+        height: 250px;
+        display: flex;
+        text-align: center;
+        align-content: center;
+        background-image: url("assets/images/vip.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .cardserv3{
+        grid-area: cardserv3;
+        height: 250px;
+        display: flex;
+        text-align: center;
+        align-content: center;
+        background-image: url("assets/images/alarme.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .cardserv4{
+        grid-area: cardserv4;
+        height: 250px;
+        display: flex;
+        text-align: center;
+        align-content: center;
+        background-image: url("assets/images/camera.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .cardserv5{
+        grid-area: cardserv5;
+        height: 250px;
+        display: flex;
+        text-align: center;
+        align-content: center;
+        background-image: url("assets/images/agents.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .cardserv6{
+        grid-area: cardserv6;
+        height: 250px;
+        display: flex;
+        text-align: center;
+        align-content: center;
+        background-image: url("assets/images/evenement.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .cardserv7{
+        grid-area: cardserv7;
+        height: 250px;
+        display: flex;
+        text-align: center;
+        align-content: center;
+        background-image: url("assets/images/nettoyage.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .cardserv8{
+        grid-area: cardserv8;
+        height: 250px;
+        display: flex;
+        text-align: center;
+        align-content: center;
+        background-image: url("assets/images/localisation.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .servimg{
+        height: 40px;
+        width: 40px;
+        margin-right: 5px;
+    }
+    .serviText{
+        display: flex;
+        text-align: center;
+        align-content: center;
+        background-color: black;
+        font-size: 14px;
+        padding: 5px;
+        border-radius: 10px;
+    }
+    .details{
+        text-align: center;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+    .blogs{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 4px;
+    }
+    .blogs img{
+        width: 45%;
+        height: 350px;
+        margin-top: 8px;
+        padding: 5px;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+    @media (max-width: 500px){
+        .blogs img{
+            width: 80%;
+        } 
+    }
+    .imgblogtext{
+        font-size: 18px;
+    }
+    .sectionContact{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "lien maps"
+        "adress adress";
+        gap: 5px;
+        margin-bottom: 20px;
+    }
+    @media (max-width:500px){
+        .sectionContact{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "lien"
+        "maps"
+        "adress";
+    }
+    }
+    .lien{
+        grid-area: lien;
+        display: grid;
+    }
+    .lienReseau{
+        text-align: center;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        
+    }
+    .imgReseau{
+        height: 35px;
+        width: 35px;
+        margin-right: 10px;
+    }
+    .titleReseau:hover{
+        color: red;
+        font-size: 22px;
+    }
+    .numero{
+        display: grid;
+    }
+    .hovernumero:hover{
+        color: red;
+    }
+    .maps{
+        grid-area: maps;
+        display: grid;
+    }
+    .divmaps{
+        display: grid;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    .adress{
+        grid-area: adress;
+        display: grid;
+    }
+    form{
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    .A1{
+        display: grid;
+        justify-content: center;
+    }
+    .A2{
+        display: grid;
+        justify-content: center;
+    }
+    input{
+        text-align: center;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        width: 250px;
+        height: 30px;
+        border-radius: 10px;
+        border: none;
+        color: black;
+        background-color: rgba(217, 217, 217, 1);
+    }
+    textarea{
+        text-align: center;
+        justify-content: center;
+        border-radius: 10px;
+        border: none;
+        color: black;
+        background-color: rgba(217, 217, 217, 1);
+    }
+    #submit{
+        text-align: center;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        width: 100px;
+        height: 25px;
+        border-radius: 10px;
+        border: none;
+        color: white;
+        background-color: blue;
+    }
+    #submit:hover{
+        background-color: red;
+        color: white;
+        font-size: 16px;
+    }
+    #footer{
+        color: white;
+        width: 100%;
+        background-color: #00072b;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+    }
+    .imglienfooter{
+        height: 35px;
+        width: 35px;
+        margin-top: 20px;
+        margin-right: 28px;
+    }
+    .lienReseaufooter{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-content: center;
+
+    }
+    .lienfooter{
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+    .alienfooter{
+        margin-right: 12px;
+    }
+    .copyright{
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+    .textcopyright{
+        color: white;
+        font-size: 14px;
+    }
+    </style>
+</head>
+<body>
+    <section class="home">
+        <section class="body">
+                <section class="hearder">
+                        <section class="logo">
+                            <img class="imglogo" src="assets/images/logo.jpg">
+                        </section>
+                        <section class="menu">
+                            <a href="#about" class="menuh">Apropos</a>
+                            <a href="#services" class="menuh">Services</a>
+                            <a href="#blog" class="menuh">Blog</a>
+                            <a href="#contacts" class="menuh">Contacts</a>
+                        </section>
+                    </section>
+
+            <section id="hero"></section>
+            <section id="about">
+            <h1 class="Title">Apropos</h1>
+<p class="textAbo"><span class="spanT">Bridges Worldwide Security </span>est une entreprise de Surveillance et Gardiennage au service de la satisfaction de vos besoins les plus exigeants.Nous vous apportons des solutions performantes et fiables tant en terme de qualité que de maitrise des délais et des coûts.Nos équipes d’agents, déterminés et haute valeur ajoutée pour répondre aux problématiques complexes liées a la sécurité des bâtiments ouverts au Public .Nos solutions-sécurité prennent en compte les spécificités et l’environnement de chacun de nos clients.Nous procédons à une analyse systémique de vos risques pour trouver des solutions innovantes et adaptés. Nous assurons le contrôle des accès (entrées ,sorties) , la gestion de foule et du public, la surveillance accueil clientèle, personnel, livraison</p>
+<p class="textAbou"><span class="spanT">B.W.S SÉCURITÉ </span> est une société de SECURITE qui a la capacité de gestion sécuritaire des biens et des personnes car elle dispose des agents hautement qualifiés et formés pour mener à bien ces tâches et surtout elle a des logistiques de dernière génération ( habillement, transmission, vidéosurveillance, accessoires, véhicules, géolocalisation)</p>
+</section>
+<section id="services">
+                    <h1 class="Title">Services</h1>
+                    <section class="Card">
+                        <div class="cardserv1">
+                            <div class="details">
+                                <img class="servimg" src="assets/icons/favori.png" alt="">
+                                <h3 class="serviText">Gardiennage</h3>
+</div>
+</div>
+<div class="cardserv2">
+<div class="details">
+                                        <img class="servimg" src="assets/icons/favori.png" alt="">
+                                        <h3 class="serviText">Protection VIP</h3>
+</div>
+</div>
+<div class="cardserv3">
+<div class="details">
+                                        <img class="servimg" src="assets/icons/favori.png" alt="">
+                                        <h3 class="serviText">Systeme d’Alame</h3>
+                                    </div>
+</div>
+<div class="cardserv4">
+                                <div class="details">
+                                        <img class="servimg" src="assets/icons/favori.png" alt="">
+                                        <h3 class="serviText">Camera de Surveillance</h3>
+</div>
+</div>
+<div class="cardserv5">
+                                <div class="details">
+                                        <img class="servimg" src="assets/icons/favori.png" alt="">
+                                        <h3 class="serviText">Agent de Securite Arme</h3>
+                                    </div>
+</div>
+<div class="cardserv6">
+<div class="details">
+                                        <img class="servimg" src="assets/icons/favori.png" alt="">
+                                        <h3 class="serviText">Securite Evenementielle</h3>
+ </div>
+</div>
+<div class="cardserv7">
+    <div class="details">
+    <img class="servimg" src="assets/icons/favori.png" alt="">
+    <h3 class="serviText">Nettoyage</h3>
+</div>
+</div>
+<div class="cardserv8">
+    <div class="details">
+    <img class="servimg" src="assets/icons/favori.png" alt="">
+    <h3 class="serviText">Géolocalisation</h3>
+    </div>
+</div>
+</section>
+</section>
+<section id="blog">
+    <h1 class="Title">Blog</h1>
+    <div class="imgblog0">
+    <h3 class="imgblogtext">PARCE QUE VOUS MÉRITEZ D'ÊTRE EN SÉCURITÉ</h3>
+    </div>
+<section class="blogs">
+    <img src="assets/images/equipes.jpg" alt="">
+    <img src="assets/images/entrainement.jpg" alt="">
+    <img src="assets/images/P1.jpg" alt="">
+    <img src="assets/images/P2.jpg" alt="">
+    <img src="assets/images/P3.jpg" alt="">
+    <img src="assets/images/P4.jpg" alt="">
+    <img src="assets/images/P5.jpg" alt="">
+    <img src="assets/images/P6.jpg" alt="">
+    <img src="assets/images/P7.jpg" alt="">
+    <img src="assets/images/P8.jpg" alt="">
+    <img src="assets/images/P9.jpg" alt="">
+    <img src="assets/images/P10.jpg" alt="">
+    <img src="assets/images/P11.jpg" alt="">
+    <img src="assets/images/P12.jpg" alt="">
+</section>
+</section>
+<section id="contacts">
+<h1 class="Title">Contact-nous</h1>
+<section class="sectionContact">
+<section class="lien">
+    <div class="lienReseau">
+    <a href="mailto:soul.diabate1@gmail.com"><img class="imgReseau" src="assets/icons/e-mail.png" alt=""></a>
+    <a href="mailto:soul.diabate1@gmail.com"><h3 class="titleReseau">Mail</h3></a>
+    </div>
+    <div class="lienReseau">
+    <a href="https://www.tiktok.com/@souldja_euro?_=8fPEWA9KXv3&_r=1"><img class="imgReseau" src="assets/icons/tic-tac.png" alt=""></a>
+    <a href="https://www.tiktok.com/@souldja_euro?_=8fPEWA9KXv3&_r=1"><h3 class="titleReseau">Tiktok</h3></a>
+    </div>
+    <div class="lienReseau">
+    <a href=""><img class="imgReseau" src="assets/icons/youtube.png" alt=""></a>
+    <a href=""><h3 class="titleReseau">Youtube</h3></a>
+    </div>
+    <div class="lienReseau">
+    <a href="https://www.facebook.com/bridgesbw1"><img class="imgReseau" src="assets/icons/facebook.png" alt=""></a>
+    <a href="https://www.facebook.com/bridgesbw1"><h3 class="titleReseau">Facebook</h3></a>
+    </div>
+    <div class="lienReseau">
+    <a href="http://wa.me/+22378333417"><img class="imgReseau" src="assets/icons/whatsapp.png" alt=""></a>
+    <a href="http://wa.me/+22378333417"><h3 class="titleReseau">Whatsapp</h3></a>
+    </div>
+    <div class="lienReseau">
+    <a href="http://"><img class="imgReseau" src="assets/icons/instagram.png" alt=""></a>
+    <a href="http://"><h3 class="titleReseau">Instagram</h3></a>
+    </div>
+    <div class="lienReseau">
+    <img class="imgReseau" src="assets/icons/appel.png" alt="">
+    <div class="numero">
+        <a class="hovernumero" href="tel:+22320230294"><h3 class="titleReseau"></h3>+223 20 23 02 94</a>
+    <a class="hovernumero" href="tel:+22376838181"><h3 class="titleReseau"></h3>+223 76 83 81 81</a>
+    <a class="hovernumero" href="tel:+22378333417"><h3 class="titleReseau"></h3>+223 78 33 34 17</a>
+    </div>
+                                
+    </div>
+    </section>
+    <section class="maps">
+    <div class="divmaps">
+<h3>ACI 2000 bp E 99 Bamako, Mali</h3>
+<div class="mapouter"><div class="gmap_canvas"><iframe width="300" height="250" id="gmap_canvas" src="https://maps.google.com/maps?q=CLEANING%20SERVICES,%20sambayoussoufa994@gmail.com,%20Bamako&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://embedgooglemap.net/124/"></a><br><style>.mapouter{/*position:relative;*/text-align:right;height:250px;width:300px;}</style><a href="https://www.embedgooglemap.net">embed google maps</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:250px;width:300px;}</style></div></div>
+</div>
+</section>
+<section class="adress">
+<form action="#">
+<div class="A1">
+<label for="">Nom et Prenom</label>
+<input type="text" id="name" name="name" placeholder="Votre nom & prenom" required>
+<label for="">Mail</label>
+<input type="email" id="email" name="email required" placeholder="Votre E-mail">
+<label for="">Numero de Phone</label>
+<input type="text" id="phone" name="phone" placeholder="Votre numero de telephone" required>
+<input type="submit" id="submit" name="submit" onclick="sendToWhatsapp();" value="Envoyer">
+</div>
+<div class="A2">
+<label for="">Message</label>
+<textarea name="message" id="message" cols="30" rows="10" placeholder="message" required></textarea>
+</div>
+</form>
+
+</section>
+</section>
+</section>
+<section id="footer">
+    <div class="lienfooter">
+        <a href="#about" class="alienfooter" href="">Apropos</a>
+        <a href="#services" class="alienfooter" href="">Services</a>
+        <a href="#blog" class="alienfooter" href="">Blog</a>
+        <a href="#contacts" class="alienfooter" href="">Contacts</a>
+    </div>
+    <div class="lienReseaufooter">
+        <a href="https://www.facebook.com/bridgesbw1"><img class="imglienfooter" src="assets/icons/facebook.png"></a>
+        <a href="mailto:soul.diabate1@gmail.com"><img class="imglienfooter" src="assets/icons/e-mail.png"></a>
+        <a href=""><img class="imglienfooter" src="assets/icons/instagram.png"></a>
+        <a href=""><img class="imglienfooter" src="assets/icons/youtube.png"></a>
+        <a href="https://www.tiktok.com/@souldja_euro?_=8fPEWA9KXv3&_r=1"><img class="imglienfooter" src="assets/icons/tic-tac.png"></a>
+        <a href="https://wa.me/+22378333417"><img class="imglienfooter" src="assets/icons/whatsapp.png"></a>
+    </div>
+    <div class="copyright">
+        <p class="textcopyright">copyright©2023</p>
+    </div>
+</section>
+</section>
+</section>
+<script type="text/javascript">
+    function sendToWhatsapp(){
+    let number = "+22378333417";
+
+    let name = document.getElementById('name').value;
+    let email = document.getElementById('email').value;
+    let phone = document.getElementById('phone').value;
+    let message = document.getElementById('message').value;
+
+    var url = "https://wa.me/" + number + "?text="
+    + "Name : " +name+ "%0a"
+    + "Email : " +email+ "%0a"
+    + "Numero : " +phone+ "%0a"
+    + "Message : " +message+ "%0a%0a";
+
+    window.open(url, '_blank').focus();
+}
+</script>
+<script src="https://webaxen.com/js/jquery3.6.min.js"></script>
+<script src="https://webaxen.com/js/bootstrap.bundle.min.js"></script>
+<script src="https://webaxen.com/js/owl.carousel.min.js"></script>
+<script src="https://webaxen.com/js/script.js"></script>
+</body>
+</html>
